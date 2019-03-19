@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSearch1", "PeopleSearch1\PeopleSearch1.csproj", "{DAD1C491-21DD-4573-AA18-FBDD59A062B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleSearch1.Tests", "PeopleSearch1.Tests\PeopleSearch1.Tests.csproj", "{1553FFC8-7003-41FD-8439-78DCD92E3773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAD1C491-21DD-4573-AA18-FBDD59A062B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD1C491-21DD-4573-AA18-FBDD59A062B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD1C491-21DD-4573-AA18-FBDD59A062B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD1C491-21DD-4573-AA18-FBDD59A062B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1553FFC8-7003-41FD-8439-78DCD92E3773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1553FFC8-7003-41FD-8439-78DCD92E3773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1553FFC8-7003-41FD-8439-78DCD92E3773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1553FFC8-7003-41FD-8439-78DCD92E3773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BCBD8857-2D48-47EB-955F-7D81A9CC30A8}
+	EndGlobalSection
+EndGlobal

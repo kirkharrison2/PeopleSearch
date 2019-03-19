@@ -1,0 +1,48 @@
+﻿<div id="wrapper">
+    <div id="searchContainer">
+        <h1>People Search</h1>
+        <input v-model="searchText" v-on:keyup.enter="delayedClick()"/>
+        <button v-on:click="delayedClick()">SEARCH</button>
+    </div>
+    <div id="tableContainer">
+        <div id="loadingIcon" v-if="loading">
+            Loading
+        </div>
+        <table id="table1" v-if="!loading">
+            <tr>
+                <th>LAST NAME</th>
+                <th>FIRST NAME</th>
+                <th>ADDRESS</th>
+                <th>AGE</th>
+                <th>INTERESTS</th>
+                <th>PIC</th>
+            </tr>
+            <tr id="tableItems" v-for="(person, index) in personsDisplay">
+                <td>
+                    {{person.lastName}}
+                </td>
+                <td>
+                    {{person.firstName}}
+                </td>
+                <td>
+                    {{person.address}}
+                </td>
+                <td>
+                    {{person.age}}
+                </td>
+                <td>
+                    {{person.interests}}
+                </td>
+                <td>
+                    {{person.pic}}
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+
+<script src="~/Scripts/vue.js"></script>
+<script src="~/Scripts/app.js"></script>

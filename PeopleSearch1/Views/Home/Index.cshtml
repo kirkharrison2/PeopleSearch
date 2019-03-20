@@ -7,7 +7,7 @@
             Loading
         </div>
     </div>
-    <div id="tableContainer" v-show="!loading">
+    <div id="tableContainer" v-show="!loading && !initialLoadFlag">
         
         <table id="table1" >
             <tr>
@@ -35,7 +35,7 @@
                     {{person.Interests}}
                 </td>
                 <td>
-                    {{person.PicUrl}}
+                    <img :src="getPic(person)" v-bind:alt="pic" class="pic"/>
                 </td>
 
             </tr>

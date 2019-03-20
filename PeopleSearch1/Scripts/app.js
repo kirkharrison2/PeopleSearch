@@ -13,7 +13,9 @@ var app = new Vue({
         searchText: "",
         loading: false,
         personsDisplay: [],
-        persons: []
+        persons: [],
+        initialLoadFlag: true,
+        pic: ""
     },
     methods: {
         searchLoading: function () {
@@ -42,8 +44,9 @@ var app = new Vue({
             
             console.log("Display list", this.personsDisplay)
             console.log("Searched this name: ", this.searchText);
-            this.loading = false
-            this.searchText = ""
+            this.loading = false;
+            this.initialLoadFlag = false;
+            this.searchText = "";
 
         },
         delayedClick: function () {
@@ -58,6 +61,9 @@ var app = new Vue({
                     this.persons = data;
                 });
             });
+        },
+        getPic: function (person) {
+            return person.PicUrl
         }
 
     }

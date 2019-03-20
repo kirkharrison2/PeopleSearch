@@ -13,8 +13,8 @@ namespace PeopleSearch1.DAL
         {
             var persons = new List<Person>
             {
-            new Person{Id=1,LastName="Scott",FirstName="Michael", Address= "Scranton", Age = 47, Interests = "Improv", PicUrl = "TODO"},
-            new Person{Id=2,LastName="Halpert",FirstName="Jim", Address= "New York", Age = 32, Interests = "Sports", PicUrl = "TODO"},
+            new Person{Id=1,LastName="SCOTT",FirstName="MICHAEL", Address= "Scranton", Age = 47, Interests = "Improv", PicUrl = "TODO"},
+            new Person{Id=2,LastName="HALPERT",FirstName="JIM", Address= "New York", Age = 32, Interests = "Sports", PicUrl = "TODO"},
 
             };
 

@@ -8,26 +8,42 @@ var app = new Vue({
     el: '#wrapper',
     created: function () {
         this.grabPeople();
-        this.personsDisplay = this.persons;
     },
     data: {
         searchText: "",
         loading: false,
         personsDisplay: [],
         persons: []
-
     },
     methods: {
         searchLoading: function () {
+            // reset list of people displayed
+            console.log("clicked");
+            // Quick data validation
+            if (this.searchText === "") {
+                alert("Search box is empty. Please search by first or last name.")
+                return;
+            }
             this.personsDisplay = []
+     
             this.loading = true
+
+
             for (let i = 0; i < this.persons.length; i++) {
-                if (this.persons[i].LastName.indexOf(this.searchText.toUpperCase()) > -1 ||
-                    this.persons[i].FirstName.indexOf(this.searchText.toUpperCase()) > -1) {
+                // Make everything uppercase for easier searching
+                let first = this.persons[i].FirstName.toUpperCase();
+                let last = this.persons[i].LastName.toUpperCase();
+                if (last.indexOf(this.searchText.toUpperCase()) > -1 ||
+                    first.indexOf(this.searchText.toUpperCase()) > -1) {
                     this.personsDisplay.push(this.persons[i])
+       
                 }
             }
+            
+            console.log("Display list", this.personsDisplay)
+            console.log("Searched this name: ", this.searchText);
             this.loading = false
+            this.searchText = ""
 
         },
         delayedClick: function () {

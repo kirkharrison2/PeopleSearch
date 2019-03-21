@@ -1,13 +1,16 @@
 ﻿<div id="wrapper">
     <div id="searchContainer">
         <h1>People Search</h1>
-        <input v-model="searchText" v-on:keyup.enter="delayedClick()" />
+        <input v-model="searchText" v-on:keyup.enter="delayedLoad()" />
         <button v-on:click="delayedClick()">SEARCH</button>
-        <div id="loadingIcon" v-if="loading">
-            Loading
+        <div id="loadingIcon" v-show="loading">
+            <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
     </div>
-    <div id="tableContainer" v-show="!loading && !initialLoadFlag">
+    <div id="noSearchResults" v-show="!loading && personsDisplay.length === 0">
+        No search result found
+    </div>
+    <div id="tableContainer" v-show="!loading && personsDisplay.length > 0">
         
         <table id="table1" >
             <tr>

@@ -1,6 +1,6 @@
 ﻿
 function getPeople() {
-    return fetch("api/People");
+    return fetch("../api/People");
 };
 console.log("worked");
 
@@ -18,18 +18,12 @@ var app = new Vue({
         pic: ""
     },
     methods: {
-        searchLoading: function () {
+        searchPeople: function () {
             // reset list of people displayed
             console.log("clicked");
             // Quick data validation
-            if (this.searchText === "") {
-                alert("Search box is empty. Please search by first or last name.")
-                return;
-            }
+            
             this.personsDisplay = []
-     
-            this.loading = true
-
 
             for (let i = 0; i < this.persons.length; i++) {
                 // Make everything uppercase for easier searching
@@ -49,16 +43,32 @@ var app = new Vue({
             this.searchText = "";
 
         },
-        delayedClick: function () {
-            setTimeout(this.searchLoading(), 500);
-            // this.grabPeople();
-        }, 
+        delayedLoad: function () {
+            if (this.validateSearchBox()) {
+                this.loading = true;
+                setTimeout(this.searchPeople, 2000);
+            } else {
+                return;
+            }
+            
+        },
+        validateSearchBox: function () {
+            if (this.searchText === "") {
+                alert("Search box is empty. Please search by first or last name.")
+                return false;
+            } else {
+                return true;
+            }
+        },
         grabPeople: function () {
-            getPeople().then(response => {
+            this.loading = true;
+            getPeople().then(response => {                
                 response.json().then(data => {
                     console.log("grabbed data")
                     console.log(data);
                     this.persons = data;
+                    this.personsDisplay = data;
+                    this.loading = false;
                 });
             });
         },

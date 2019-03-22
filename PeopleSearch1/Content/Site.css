@@ -1,7 +1,8 @@
 ﻿body {
     padding-top: 20px;
     padding-bottom: 10px;
-    background-color: Highlight;
+    background-color: #3a5cd8;
+    font-family: 'Roboto', sans-serif;
 }
 
 #wrapper {
@@ -15,9 +16,18 @@
 h1 {
     font-size: 3rem;
     text-align: center;
+    color: #898989;
 }
-#inputAndButton{
-    display: inline;
+#inputAndButton {
+    display: inline-block;
+    height: 2rem;
+}
+#inputField{
+    width: 400px;
+    
+
+}
+#btn{
 }
 th {
     background-color: #3a5cd8;
@@ -40,6 +50,7 @@ table {
     font-size: 1.5rem;
     min-width: 800px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 
 #tableContainer {
@@ -60,7 +71,8 @@ table {
 }
 #noSearchResults{
     text-align: center;
-
+    margin-top: 20px;
+    font-size: 2rem;
 }
 .pic{
     width: 50px;

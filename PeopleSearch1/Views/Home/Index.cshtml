@@ -4,8 +4,8 @@
     <div id="searchContainer">
         <h1>People Search</h1>
         <div id="inputAndButton">
-            <input v-model="searchText" v-on:keyup.enter="delayedLoad()" />
-            <button v-on:click="delayedLoad()">SEARCH</button>
+            <input id="inputField" v-model="searchText" v-on:keyup.enter="delayedLoad()" />
+            <button id ="btn"  v-on:click="delayedLoad()">SEARCH</button>
         </div>        
         <div id="loadingIcon" v-show="loading">
             <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -23,7 +23,7 @@
                 <th></th>
                 <th>LAST NAME</th>
                 <th>FIRST NAME</th>
-                <th>ADDRESS</th>
+                <th>CITY</th>
                 <th>AGE</th>
                 <th>INTERESTS</th>
 

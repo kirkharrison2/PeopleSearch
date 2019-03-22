@@ -7,7 +7,7 @@ console.log("worked");
 var app = new Vue({
     el: '#wrapper',
     created: function () {
-        this.grabPeople();
+        this.getPeopleList();
     },
     data: {
         searchText: "",
@@ -55,7 +55,7 @@ var app = new Vue({
                 return true;
             }
         },
-        grabPeople: function () {
+        getPeopleList: function () {
             this.loading = true;
             getPeople().then(response => {                
                 response.json().then(data => {

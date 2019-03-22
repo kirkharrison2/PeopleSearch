@@ -1,29 +1,45 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿body {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: Highlight;
 }
 
 #wrapper {
     min-height: 700px;
+    background-color: white;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 {
     font-size: 3rem;
+    text-align: center;
 }
-
+#inputAndButton{
+    display: inline;
+}
+th {
+    background-color: #3a5cd8;
+    color: white;
+}
 th, td {
     padding: 5px;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid black;;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 
 table {
     margin-top: 20px;
     border-collapse: collapse;
+    font-size: 1.5rem;
+    min-width: 800px;
+    border-radius: 5px;
 }
 
 #tableContainer {
@@ -47,10 +63,18 @@ table {
 
 }
 .pic{
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    
 }
-
+#loadingIcon{
+    margin-top: 75px;
+}
+/* Pure CSS spinner taken from loading.io */
 .lds-roller {
     display: inline-block;
     position: relative;

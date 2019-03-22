@@ -19,11 +19,8 @@ var app = new Vue({
     },
     methods: {
         searchPeople: function () {
-            // reset list of people displayed
-            console.log("clicked");
-            // Quick data validation
-            
-            this.personsDisplay = []
+            // reset list of people displayed                
+            this.personsDisplay = [];
 
             for (let i = 0; i < this.persons.length; i++) {
                 // Make everything uppercase for easier searching
@@ -31,8 +28,7 @@ var app = new Vue({
                 let last = this.persons[i].LastName.toUpperCase();
                 if (last.indexOf(this.searchText.toUpperCase()) > -1 ||
                     first.indexOf(this.searchText.toUpperCase()) > -1) {
-                    this.personsDisplay.push(this.persons[i])
-       
+                    this.personsDisplay.push(this.persons[i]);
                 }
             }
             
@@ -49,8 +45,7 @@ var app = new Vue({
                 setTimeout(this.searchPeople, 2000);
             } else {
                 return;
-            }
-            
+            }            
         },
         validateSearchBox: function () {
             if (this.searchText === "") {
@@ -64,8 +59,6 @@ var app = new Vue({
             this.loading = true;
             getPeople().then(response => {                
                 response.json().then(data => {
-                    console.log("grabbed data")
-                    console.log(data);
                     this.persons = data;
                     this.personsDisplay = data;
                     this.loading = false;

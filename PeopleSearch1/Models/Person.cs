@@ -15,8 +15,6 @@ namespace PeopleSearch1.Models
         public int Age { get; set; }
         public string Interests { get; set; } 
         public string PicUrl { get; set; }
-    }
-
-   
+    }  
 
 }

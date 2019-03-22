@@ -1,4 +1,4 @@
-#People Search
+# People Search
 
 Simple web application created in ASP.NET  and Vue.js to show a list of people and search based on first and last name.
 

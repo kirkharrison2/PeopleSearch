@@ -20,14 +20,16 @@ h1 {
 }
 #inputAndButton {
     display: inline-block;
-    height: 2rem;
 }
 #inputField{
     width: 400px;
-    
-
+    height: 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 10px;
 }
 #btn{
+    height: 1.7rem;
+    border-radius: 10px;
 }
 th {
     background-color: #3a5cd8;
